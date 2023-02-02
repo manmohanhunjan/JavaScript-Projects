@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // const test = {
+      //   prop: 42,
+      //   func: function () {
+      //     return this.prop;
+      //   },
+      // };
+      // console.log(test.func);
+
+      //______________________________________________
+
+      //{2}
+
+      // function getThis() {
+      //   return this;
+      // }
+      // const obj1 = { name: "obj1" };
+
+      // const obj2 = { name: "obj2" };
+
+      // obj1.getThis = getThis;
+      // obj2.getThis = getThis;
+
+      // console.log(obj1.getThis());
+      // console.log(obj2.getThis());
+
+      //______________________________________________
+
+      // //{2.1}
+
+      // const obj3 = {
+      //   _proto_: obj1,
+      //   name: "obj3",
+      // };
+
+      // obj3.getThis = getThis;
+      // console.log(obj3.getThis());
+
+      //______________________________________________
+
+      //{3}
+
+      // const obj4 = {
+      //   name: "obj4",
+      //   getThis() {
+      //     return this;
+      //   },
+      // };
+      // const obj5 = { name: "obj5" };
+      // obj5.getThis = obj4.getThis;
+      // console.log(obj5.getThis());
+
+      //______________________________________________
+
+      //{4} StrictThis
+
+      // function getThisStrict() {
+      //   "use strict"; //Enter strict mode
+      //   return this;
+      // }
+      // //Only for demonstration - you should not mutate built-in prototypes
+      // Number.prototype.getThisStrict = getThisStrict;
+      // console.log(typeof (1).getThisStrict()); //"number"
+
+      // //______________________________________________
+
+      // //{4.1}
+
+      // console.log(typeof getThisStrict());
+
+      //______________________________________________
+
+      //{5} Non - Strict MODE
+      //(this substitution:ensures that the value of this is always object)
+
+      // function getThis() {
+      //   return this;
+      // }
+      // //Only for demonstration - you should not mutate built-in prototypes
+      // Number.prototype.getThis = getThis;
+      // console.log(typeof (1).getThis()); //"object"
+      // console.log(getThis() === globalThis); //true
+    </script>
+  </body>
+</html>

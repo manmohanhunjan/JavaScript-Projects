@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EMI</title>
+    <script src="/JS/emi.js" defer></script>
+  </head>
+  <body>
+    <h1>EMI Calculator</h1>
+    <br />
+    <br />
+    <label for="principal_amount">Enter the Product Price</label>
+    <input type="number" name="p.a" id="p" />
+    <br />
+    <br />
+    <label for="duration_in_months"
+      >Loan term / Lenure /Duration in number of months</label
+    >
+    <input type="number" name="tenure" id="n" />
+    <br />
+    <br />
+    <label for="IR">Enter the Monthly interest rate</label>
+    <input type="number" name="interest_rate" id="r" />
+    <button onclick="emi()">Calculate EMI</button>
+    <p>Total EMI - <span id="result"></span></p>
+    <p>Total amount payable With Interest - <span id="with_interest"></span></p>
+  </body>
+</html>

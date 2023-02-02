@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="/js/data.js" defer></script>
+    <script src="/js/otp.js" defer></script>
+  </head>
+  <body>
+    <h1>Confirmation Page</h1>
+    <p>Dear <span id="n1"></span>,</p>
+    <br />
+    <p>
+      Thank you for your inquiry. A 4 digit verification number has been sent to
+      your email: <span id="em1"></span>, please enter it in the following box
+      and submit for Confirmation:
+    </p>
+    <input type="number" name="" id="otp1" maxlength="4" />
+    <button onclick="check()">Check</button>
+    <p id="result"></p>
+  </body>
+</html>

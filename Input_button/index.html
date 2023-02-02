@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Input in 3 fields</h1>
+    <input type="text" name="" id="a" />
+    <input type="text" name="" id="b" />
+    <input type="text" name="" id="c" />
+    <button onclick="fucn1()"></button>
+
+    <script>
+      function fucn1() {
+        var x = document.getElementById("a").value;
+        var y = document.getElementById("b").value;
+        var z = document.getElementById("c").value;
+        var sum = x + y + z;
+        console.log(sum);
+      }
+    </script>
+  </body>
+</html>

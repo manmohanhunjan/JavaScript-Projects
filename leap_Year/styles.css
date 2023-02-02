@@ -1,0 +1,51 @@
+body{
+    box-sizing: border-box;
+    font-family: sans-serif,serif,Arial, Helvetica;
+}
+
+h1{
+    text-align: center;
+    max-width: 100%;
+    height: 40px;
+    background-color: darkblue;
+    color: aliceblue;
+    padding: 40px;
+    border-radius: 10px;
+}
+.container{
+    max-width: 100%;
+    height: 100px;
+    background-color: darkred;
+    color: aliceblue;
+    font-size: 2em;
+    text-align: center;
+    padding: 70px;
+    border-radius: 10px;
+    
+}
+.container label{
+    display: block;
+}
+.container button{
+    color: aliceblue;
+    background-color: darkblue;
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid darkblue;
+}
+button:hover{
+    color: brown;
+    background-color: aliceblue;
+}
+button:active{
+    color: rgb(255, 255, 255);
+    background-color: rgb(65, 218, 116);
+}
+.container label input{
+    border-radius: 10px;
+    height: 30px;
+    border: 1px solid snow;
+    font-size: 1em;
+    max-width: 100px;
+}

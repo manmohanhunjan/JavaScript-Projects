@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loan Application Page</title>
+    <script src="/js/emi.js" defer></script>
+    <script src="/js/data.js" defer></script>
+    <script src="/js/otp.js" defer></script>
+  </head>
+  <body>
+    <h1>Loan Application Page</h1>
+    <label for="Full name">Enter Your Name :</label>
+    <label for="first name">Enter First Name:</label>
+    <input type="text" name="Full Name" id="nm1" minlength="4" required />
+    <label for="first name">Enter Last Name:</label>
+    <input type="text" name="Full Name" id="nm2" minlength="4" required />
+    <br />
+    <br />
+    <label for="email">Email ID:</label>
+    <input type="email" name="email_id" id="mail" required />
+    <br />
+    <br />
+    <label for="PAN">PAN Card:</label>
+    <input type="text" name="pan" id="p_card" required pattern="[a-zA-Z0-9]+" />
+    <br />
+    <br />
+    <label for="loan">Enter Loan amount:</label>
+    <input type="number" name="loan" id="loan_amt" maxlength="9" required />
+    <button onclick="abc()">Calculate</button>
+    <p id="emi_r"></p>
+    <a href="/confirm.html"><button>Submit</button></a>
+  </body>
+</html>

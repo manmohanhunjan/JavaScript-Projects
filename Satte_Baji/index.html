@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="">Random Number:</label>
+    <input type="number" name="" id="random_number" />
+    <div id="countdown">0</div>
+    <button onclick="choice1()">1</button>
+    <button onclick="choice2()">2</button>
+    <button onclick="choice3()">3</button>
+    <button onclick="choice4()">4</button>
+    <button onclick="choice5()">5</button>
+    <button onclick="choice6()">6</button>
+    <p id="result"></p>
+
+    <script>
+      var random_number = Math.floor(Math.random() * 7);
+      document.getElementById("random_number").value = random_number;
+      var num1;
+      var num2;
+      var num3;
+      var num4;
+      var num5;
+      var num6;
+
+      var countdown;
+
+      function choice1() {
+        num1 = 1;
+        if (num1 == random_number) {
+          var timeleft = 10;
+          var downloadTimer = setInterval(function () {
+            if (timeleft <= 0) {
+              clearInterval(downloadTimer);
+              document.getElementById("countdown").innerHTML =
+                "Finished You Were Right";
+            } else {
+              document.getElementById("countdown").innerHTML =
+                timeleft + " seconds remaining";
+            }
+            timeleft -= 1;
+          }, 1000);
+        } else {
+          var timeleft = 10;
+          var downloadTimer = setInterval(function () {
+            if (timeleft <= 0) {
+              clearInterval(downloadTimer);
+              document.getElementById("countdown").innerHTML =
+                "Finished You Were Wrong";
+            } else {
+              document.getElementById("countdown").innerHTML =
+                timeleft + " seconds remaining";
+            }
+            timeleft -= 1;
+          }, 1000);
+        }
+      }
+
+      function choice2() {
+        num2 = 2;
+        if (num2 == random_number) {
+          setInterval(choice2, 1000);
+          let count = time.getSeconds();
+          if (count > 10) {
+            count -= 10;
+            alert("Time Up , You Were Right");
+          }
+          //   if (count==0){
+          //     count = 10;
+          //   }
+        } else {
+          setInterval(choice2, 1000);
+          let count = time.getSeconds();
+          if (count > 10) {
+            count -= 10;
+            alert("Time Up , You Were Wrong");
+          }
+        }
+      }
+      function choice3() {
+        num3 = 3;
+        if (num3 == random_number) {
+          setInterval(choice3, 1000);
+          let count = time.getSeconds();
+          if (count > 10) {
+            count -= 10;
+            alert("Time Up , You Were Right");
+          }
+          //   if (count==0){
+          //     count = 10;
+          //   }
+        } else {
+          setInterval(choice3, 1000);
+          let count = time.getSeconds();
+          if (count > 10) {
+            count -= 10;
+            alert("Time Up , Yo5 Were Wrong");
+          }
+        }
+      }
+      function choice4() {
+        num4 = 4;
+        if (num4 == random_number) {
+          setInterval(choice4, 1000);
+          let count = time.getSeconds();
+          if (count > 10) {
+            count -= 10;
+            alert("Time Up , You Were Right");
+          }
+          //   if (count==0){
+          //     count = 10;
+          //   }
+        } else {
+          setInterval(choice4, 1000);
+          let count = time.getSeconds();
+          if (count > 10) {
+            count -= 10;
+            alert("Time Up , You Were Wrong");
+          }
+        }
+      }
+      function choice5() {
+        num5 = 5;
+        if (num5 == random_number) {
+          setInterval(choice5, 1000);
+          let count = time.getSeconds();
+          if (count > 10) {
+            count -= 10;
+            alert("Time Up , You Were Right");
+          }
+          //   if (count==0){
+          //     count = 10;
+          //   }
+        } else {
+          setInterval(choice5, 1000);
+          let count = time.getSeconds();
+          if (count > 10) {
+            count -= 10;
+            alert("Time Up , You Were Wrong");
+          }
+        }
+      }
+      function choice6() {
+        num6 = 6;
+        if (num6 == random_number) {
+          setInterval(choice6, 1000);
+          let count = time.getSeconds();
+          if (count > 10) {
+            count -= 10;
+            alert("Time Up , You Were Right");
+          }
+          //   if (count==0){
+          //     count = 10;
+          //   }
+        } else {
+          setInterval(choice6, 1000);
+          let count = time.getSeconds();
+          if (count > 10) {
+            count -= 10;
+            alert("Time Up , You Were Wrong");
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

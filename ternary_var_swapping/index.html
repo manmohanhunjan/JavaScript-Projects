@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Var Swapping</title>
+    <!-- <script src="/js/top_swap.js" defer></script> -->
+  </head>
+  <body>
+    <h1>Input Values</h1>
+    <br />
+    <label for="">x :</label>
+    <input type="number" name="" id="x" />
+    <label for="">y :</label>
+    <input type="number" name="" id="y" />
+    <label for="">z :</label>
+    <input type="number" name="" id="z" />
+    <label for="">a :</label>
+    <input type="number" name="" id="a" />
+    <label for="">b :</label>
+    <input type="number" name="" id="b" />
+    <label for="">c :</label>
+    <input type="number" name="" id="c" />
+    <label for="">d :</label>
+    <input type="number" name="" id="d" />
+
+    <button onclick="abc()">Submit</button>
+    <p id="result"></p>
+
+    <script>
+      function abc() {
+        var x = document.getElementById("x").value;
+        var y = document.getElementById("y").value;
+        var z = document.getElementById("z").value;
+        var a = document.getElementById("a").value;
+        var b = document.getElementById("b").value;
+        var c = document.getElementById("c").value;
+        var d = document.getElementById("d").value;
+        var val =
+          x != undefined && x != ""
+            ? x
+            : y != undefined && y != ""
+            ? y
+            : z != undefined && z != ""
+            ? z
+            : a != undefined && a != ""
+            ? a
+            : b != undefined && b != ""
+            ? b
+            : c != undefined && c != ""
+            ? c
+            : d != undefined && d != ""
+            ? d
+            : 85;
+        // x != undefined
+        //   ? console.log(x)
+        //   : y != undefined
+        //   ? console.log(y)
+        //   : z != undefined
+        //   ? console.log(z)
+        //   : a != undefined
+        //   ? console.log(a)
+        //   : b != undefined
+        //   ? console.log(b)
+        //   : c != undefined
+        //   ? console.log(c)
+        //   : d != undefined
+        //   ? console.log(d)
+        //   : console.log("85");
+        document.getElementById("result").innerHTML = val;
+        // alert(abc);
+      }
+    </script>
+  </body>
+</html>

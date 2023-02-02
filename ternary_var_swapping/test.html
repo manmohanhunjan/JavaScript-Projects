@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="">x</label>
+    <input type="number" name="" id="hey1" />
+    <label for="">y</label>
+    <input type="number" name="" id="hey2" />
+    <button onclick="abc()">click</button>
+    <p id="result"></p>
+    <form action="" method="" enctype="" role=""></form>
+    <script>
+      function abc() {
+        let x1 = document.getElementById("hey1").value;
+        let y1 = document.getElementById("hey2").value;
+        let p =
+          x1 != undefined && x1 != null
+            ? alert(x1)
+            : y1 != undefined && y1 != null
+            ? alert(y1)
+            : console.log(15);
+        document.getElementById("result").innerHTML = p;
+      }
+
+      let answer = prompt(
+        `Rate how often you go to gym from 5 to 0 \n 5 if you go to gym everyday. 0 if you don't go at all`,
+        ""
+      );
+
+      let message =
+        answer <= 2
+          ? alert("You need to work out!")
+          : answer <= 4
+          ? alert("You are doing well, Keep it up!")
+          : alert("Amazing. You are working out so hard!");
+    </script>
+  </body>
+</html>

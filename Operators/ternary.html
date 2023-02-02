@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ternary</title>
+  </head>
+  <body>
+    <script>
+      function abc() {
+        let x = 5;
+        let y = 9;
+        let a = 30;
+        let z = x < y && a > y ? ++a - --a * x++ + 30 : ++y + --y * x--;
+        console.log(z);
+      }
+      function xyz() {
+        let x = 10;
+        let y = 20;
+        let z = 5;
+
+        z = (!x > y && z <= x) || !x > y ? ++x - --x * x-- : y-- + --y * --y;
+        console.log(z);
+      }
+    </script>
+  </body>
+</html>

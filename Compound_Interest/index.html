@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compound Interest</title>
+    <script src="/JS/ci.js" defer></script>
+  </head>
+  <body>
+    <h1>Compound Interest Calculator</h1>
+    <label for="principal">Enter the Principal Amount</label>
+    <input type="number" id="pa" />
+    <br />
+    <br />
+    <label for="principal">Enter the Rate(%)</label>
+    <input type="number" id="rate" />
+    <br />
+    <br />
+    <label for="principal">Enter the n (years)</label>
+    <input type="number" id="nYrs" />
+    <br />
+    <br />
+    <button onclick="QCI()">Calculate Quaterly CI</button>
+    <br />
+    <br />
+    <button onclick="HCI()">Calculate Halfyearly CI</button>
+    <br />
+    <br />
+    <button onclick="ACI()">Calculate Annualy CI</button>
+    <p id="result"></p>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 1</title>
+</head>
+<body>
+    <script>
+        let x,y,z;
+        var a,b,c;
+        {
+            var a = 90;
+            let y = 30;
+            let b = 10;
+
+            y = xyz(a,b,y);
+            a = abc(y);
+            console.log(a,y,b);
+            z *= x++ + a-- - ++y;
+            x = xyz();
+            console.log(x,y,z,a,b);
+
+        }
+        function xyz(x=10, y=20, z=30) {
+            x %= x++ + y++ - --z;
+            console.log(x,y);
+            return x;
+        }
+        function abc(z = 10) {
+            console.log(x,z);
+            return x+z;
+        }
+        console.log(x,y,z,a,b);
+
+        abc();
+
+        console.log(x,y,z,a,b);
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="correct_count"></h1>
+    <button onclick="generate_number()">Start</button>
+    <label for="">number1</label>
+    <input type="number" name="" id="num1" />
+    <label for="" id="sign"></label>
+    <label for="">number2</label>
+    <input type="number" name="" id="num2" />
+
+    <br />
+    <label for="">User Answer:</label>
+    <input type="number" name="" id="user_input" />
+    <br />
+    <button onclick="check_answer()">Check</button>
+
+    <script>
+      let generate_sign;
+      let sign;
+      let output_sign;
+      let result;
+      let count = document.getElementById("correct_count").value;
+      var numb1 = document.getElementById("num1").value;
+      var numb2 = document.getElementById("num2").value;
+      var user_input = document.getElementById("user_input").value;
+
+      function generate_number() {
+        numb1 = Math.floor(Math.random() * 100);
+        numb2 = Math.floor(Math.random() * 100);
+        document.getElementById("num1").value = numb1;
+        document.getElementById("num2").value = numb2;
+        sign_gen();
+      }
+
+      function sign_gen() {
+        sign = ["+", "-", "*", "/"];
+        generate_sign = Math.floor(Math.random() * 4);
+        output_sign = sign[generate_sign];
+        document.getElementById("sign").innerHTML = output_sign;
+      }
+
+      function addition() {
+        result = numb1 + numb2;
+        console.log(result);
+        check = result == user_input ? count++ : alert("you are wrong");
+      }
+      function minus() {
+        result = numb1 - numb2;
+        console.log(result);
+        check = user_input == result ? count++ : alert("you are wrong");
+      }
+      function multiply() {
+        result = numb1 * numb2;
+        console.log(result);
+        check = user_input == result ? count++ : alert("you are wrong");
+      }
+      function division() {
+        result = numb1 / numb2;
+        console.log(result);
+        check = user_input == result ? count++ : alert("you are wrong");
+      }
+
+      function check_answer() {
+        var check =
+          output_sign == "+"
+            ? addition()
+            : output_sign == "-"
+            ? minus()
+            : output_sign == "*"
+            ? multiply()
+            : division();
+
+        console.log(check);
+      }
+    </script>
+  </body>
+</html>

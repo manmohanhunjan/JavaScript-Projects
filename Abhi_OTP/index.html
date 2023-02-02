@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OTP</title>
+  </head>
+  <body>
+    <h1>OTP Generator</h1>
+    <br />
+    <label for="">number:</label>
+    <input
+      type="text"
+      name=""
+      id="mob_number"
+      required
+      minlength="10"
+      maxlength="10"
+    />
+    <br />
+    <button onclick="gen_OTP()">get OTP</button>
+    <br />
+    <label for="">Enter OTP:</label>
+    <input type="text" name="" id="match_otp" />
+    <button onclick="check_otp()">Verify</button>
+    <p id="result"></p>
+
+    <script>
+      count = 0;
+
+      setInterval(
+        countdown(),
+
+        1000
+      );
+
+      var systen_otp;
+
+      function gen_OTP() {
+        systen_otp = Math.floor(Math.random() * 10000);
+        console.log(systen_otp);
+      }
+
+      function check_otp() {
+        if (count == 3) {
+          alert("Not eligible");
+        } else {
+          var userotp = document.getElementById("match_otp").value;
+          if (systen_otp == userotp) {
+            alert("correct");
+          } else {
+            count++;
+            alert("inorrect");
+          }
+          //   alert(compare);
+        }
+      }
+    </script>
+  </body>
+</html>
