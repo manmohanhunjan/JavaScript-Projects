@@ -180,8 +180,8 @@ input:focus {
 }
 
 .movie-element__image img {
-  height: 100%;
-  width: 100%;
+  height: 40%;
+  width: 40%;
   object-fit: cover;
 }
 
@@ -209,6 +209,8 @@ input:focus {
   margin: 1rem auto;
   padding: 0;
 }
+
+
 
 #backdrop {
   position: fixed;

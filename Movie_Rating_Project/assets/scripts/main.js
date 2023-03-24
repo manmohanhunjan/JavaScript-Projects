@@ -32,18 +32,42 @@ addMovieBtn.addEventListener("click", function () {
   });
 });
 
-// const movieAddBtn = document.querySelector(".btn--success");
-// const movieTitleInput = document.querySelector("#title");
-// const movieImageInput = document.querySelector("#image-url");
-// const movieRatingInput = document.querySelector("#rating");
+const movieAddBtn = document.querySelector(".btn--success");
+const movieTitleInput = document.querySelector("#title");
+const movieImageInput = document.querySelector("#image-url");
+const movieRatingInput = document.querySelector("#rating");
 
-// const cardMovieListUl = document.querySelector("#movie-list");
+const cardMovieListUl = document.querySelector("#movie-list");
 
-// movieAddBtn.addEventListener("click", function () {
-//   //   alert("wrking");
-//   const li = document.createElement("li");
-//   cardMovieListUl.appendChild(li);
-//   (li.textContent = movieTitleInput.value),
-//     movieImageInput.value,
-//     movieRatingInput.value;
-// });
+movieAddBtn.addEventListener("click", function () {
+  //   alert("wrking");
+  const li = document.createElement("li");
+  const h2 = document.createElement("h2");
+  const img = document.createElement("img");
+  const p = document.createElement("p");
+  const span1 = document.createElement("span");
+  const span2 = document.createElement("span");
+
+  li.className = "movie-element__image";
+  h2.className = "movie-element__info";
+  img.setAttribute("src", movieImageInput.value);
+  img.setAttribute("alt", "");
+
+  h2.textContent = movieTitleInput.value;
+  p.textContent = "rating ";
+  span1.textContent = movieRatingInput.value;
+  span2.textContent = "/5";
+
+  span1.appendChild(span2);
+  p.appendChild(span1);
+  li.appendChild(h2);
+  li.appendChild(img);
+  li.appendChild(p);
+  cardMovieListUl.appendChild(li);
+
+  //Remover
+
+  li.addEventListener("click", function () {
+    cardMovieListUl.removeChild(li);
+  });
+});
