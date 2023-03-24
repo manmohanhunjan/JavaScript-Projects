@@ -65,6 +65,29 @@ movieAddBtn.addEventListener("click", function () {
   li.appendChild(p);
   cardMovieListUl.appendChild(li);
 
+  // Swal.fire("Good job!", "You clicked the button!", "success");
+  Swal.fire({
+    title: '"Good job!", "You clicked the button!", "success"',
+    width: 600,
+    padding: "3em",
+    color: "#716add",
+    background: "#fff url(/images/trees.png)",
+    backdrop: `
+      rgba(0,0,123,0.4)
+      url("https://media.tenor.com/xzjlrhYq_lQAAAAj/cat-nyan-cat.gif")
+      left top
+      no-repeat
+    `,
+  });
+
+  backdrop.className = "";
+  modal.classList.remove(
+    "visible",
+    "modal__title",
+    "modal_content",
+    "modal_actions"
+  );
+
   //Remover
 
   li.addEventListener("click", function () {
