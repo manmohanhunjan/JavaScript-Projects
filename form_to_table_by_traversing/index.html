@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div class="login-box">
+        <h2>Product Form</h2>
+        <section>
+          <div class="user-box">
+            <input type="text" name="" required="" id="productName">
+            <label>Product Name</label>
+          </div>
+          <div class="user-box">
+            <input type="number" name="" required="" id="productCP">
+            <label>Product Cost Price</label>
+          </div>
+          <div class="user-box">
+            <input type="number" name="" required="" id="productSP">
+            <label>Product Selling Price</label>
+          </div>
+          <div class="user-box">
+            <select name="" id="tax">
+                <option value="5%">5%</option>
+                <option value="12%">12%</option>
+                <option value="18%">18%</option>
+                <option value="28%">28%</option>
+            </select>
+            <label>Tax</label>
+          </div>
+          <div class="user-box">
+            <!-- <input type="text" name="" required="" id="discount_type"> -->
+            <select name="" id="discount_type">
+                <option value="Select Discount Type">Select Discount Type</option>
+                <option value="FLAT" id="op1">Flat</option>
+                <option value="PERCENT" id="op2">Percent</option>
+            </select>
+            <label>Discount Type</label>
+          </div>
+          <a href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Submit
+          </a>
+        </section>
+      </div>
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Product</th>
+            <th>C.P</th>
+            <th>S.P</th>
+            <th>TAX</th>
+            <th>Discount Type</th>
+            <th>Discount Value</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- <tr>
+            <td>John Smith</td>
+            <td>john.smith@example.com</td>
+            <td>(555) 555-1234</td>
+            <td>John Smith</td>
+            <td>john.smith@example.com</td>
+            <td>(555) 555-1234</td>
+            <td>john.smith@example.com</td>
+            <td>(555) 555-1234</td>
+          </tr>
+           -->
+        </tbody>
+      </table>
+    
+</body>
+</html>
