@@ -4,6 +4,7 @@ const productCP = document.querySelector('#productCP')
 const productSP = document.querySelector('#productSP')
 const tax = document.querySelector('#tax')
 const discount_type = document.querySelector('#discount_type')
+const discount_value = document.querySelector('#discount_value')
 
 var counter = 0
 
@@ -27,10 +28,25 @@ submitBtn.addEventListener('click' ,function () {
     td2.textContent = productName.value
     td3.textContent = productCP.value
     td4.textContent = productSP.value
-    td5.textContent = tax.value
+    td5.textContent = tax.value + '%'  
     td6.textContent = discount_type.value
-    td7.textContent = "" //discount value
-    td8.textContent = "" //total
+    // td7.textContent = discount_value.value
+    var dis_calc_value = 0
+    var tax_value = parseInt(tax.value)
+    // alert(tax_value)
+    if (discount_type.value == 'FLAT') {
+        td7.textContent = discount_value.value
+        //tax
+        var sp = productSP.value
+        dis_calc_value = (sp + (tax_value*sp)/100) - discount_value.value
+    } else if (discount_type.value == 'PERCENT'){
+        td7.textContent = discount_value.value + '%';
+        //tax
+        var sp = productSP.value
+        dis_calc_value = (sp + (tax_value*sp)/100) - (discount_value.value*sp)/100
+    }
+
+    td8.textContent = dis_calc_value
 
     tr.appendChild(td1)
     tr.appendChild(td2)
@@ -42,12 +58,11 @@ submitBtn.addEventListener('click' ,function () {
     tr.appendChild(td8)
 
     tbody.appendChild(tr)
+
+    //remover
+    tr.addEventListener('click', function () {
+        tbody.removeChild(tr)
+    })
     
 })
 
-//Discount event listner
-const op1 = document.querySelector('#op1')
-
-discount_type.addEventListener('onchange', function () {
-    alert('hi')
-})

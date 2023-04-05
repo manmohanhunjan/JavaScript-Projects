@@ -25,11 +25,11 @@
             <label>Product Selling Price</label>
           </div>
           <div class="user-box">
-            <select name="" id="tax">
-                <option value="5%">5%</option>
-                <option value="12%">12%</option>
-                <option value="18%">18%</option>
-                <option value="28%">28%</option>
+            <select type="number" name="" id="tax">
+                <option value="5">5%</option>
+                <option value="12">12%</option>
+                <option value="18">18%</option>
+                <option value="28">28%</option>
             </select>
             <label>Tax</label>
           </div>
@@ -37,10 +37,14 @@
             <!-- <input type="text" name="" required="" id="discount_type"> -->
             <select name="" id="discount_type">
                 <option value="Select Discount Type">Select Discount Type</option>
-                <option value="FLAT" id="op1">Flat</option>
-                <option value="PERCENT" id="op2">Percent</option>
+                <option value="FLAT" >Flat</option>
+                <option value="PERCENT" >Percent</option>
             </select>
             <label>Discount Type</label>
+          </div>
+          <div class="user-box">
+            <input type="number" name="" required="" id="discount_value">
+            <label>Discount Value</label>
           </div>
           <a href="#">
             <span></span>
