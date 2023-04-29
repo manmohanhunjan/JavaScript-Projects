@@ -25,11 +25,13 @@ function totalCalculation() {
         
         var sp = parseInt(productSP.value)
         dis_calc_value = (sp + parseInt(tax_value*sp)/100) - parseInt(discount_value.value)
-    } else if (discount_type.value == 'PERCENT'){
-        discount_value = discount_value.value + '%';
+    }
+    else if (discount_type.value == 'PERCENT'){
+        // discount_value = discount_value.value + '%';
         //tax
         var sp = parseInt(productSP.value)
         dis_calc_value = (sp + parseInt(tax_value*sp)/100) - parseInt((discount_value.value*sp)/100)
+
     }
 
     return dis_calc_value;

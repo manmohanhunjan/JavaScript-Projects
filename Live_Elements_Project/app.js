@@ -4,7 +4,7 @@ const productDescription = document.querySelector("#productDescription")
 const tax = document.querySelector("#tax")
 const discountType = document.querySelector("#discount_type")
 const discountValue = document.querySelector("#discount_value")
-const container = document.querySelector(".styled-table")
+const container = document.querySelector("#daRealContainer")
 
 const span = []
 const h2 = []
@@ -26,15 +26,38 @@ while (i < 7) {
 
 productName.addEventListener('keyup', function () {
     
-    span[0].textContent = productName.value
-    h2[0].textContent = 'Product Name:'
+    h2[0].textContent = 'Product Name:'+ productName.value;
 
     
 })
 productPrice.addEventListener('keyup', function () {
     
-    h2[1].textContent = 'Product Price:'
-    span[1].textContent = productPrice.value
-
+    h2[1].textContent = 'Product Price:'+ productPrice.value;
     
 })
+
+productDescription.addEventListener('keyup', function () {
+        
+        h2[2].textContent = 'Product Description:'+ productDescription.value;
+        
+    })
+
+tax.addEventListener('change', function () {
+        
+        h2[3].textContent = 'Tax:'+ tax.value;
+        
+    })
+
+discountType.addEventListener('change', function () {
+        
+        h2[4].textContent = 'Discount Type:'+ discountType.value;
+        
+    }
+)
+
+discountValue.addEventListener('keyup', function () {
+            
+            h2[5].textContent = 'Discount Value:'+ discountValue.value;
+            
+        }
+    )
