@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+
+    </ul>
+
+    <script>
+        const ul = document.querySelector('ul');
+        const li = [];
+        for(i=0;i<=3;i++){
+        
+        li[i] = document.createElement('li');
+        li[i].textContent = 'hii';
+        ul.append(li[i])
+
+        }
+       const p = document.createElement('p')
+       li[1].setAttribute('id', 'dosraLi')
+        li[2].remove();
+        p.textContent = 'p ka content'
+        li[0].after(p);
+        
+
+
+    </script>
+</body>
+</html>

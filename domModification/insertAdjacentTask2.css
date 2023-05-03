@@ -1,0 +1,26 @@
+.container{
+    width: 70%;
+    float: left;
+}
+.container::after{
+    clear: both;
+}
+.wideImg{
+    object-fit: cover;
+    padding: 4px;
+}
+.table{
+    width: 40%;
+    float: left;
+    /* padding: 10px; */
+}
+.table::after{
+    clear: both;
+}
+form{
+    width: 40%;
+    float: right;
+}
+.form::after{
+    clear: both;
+}

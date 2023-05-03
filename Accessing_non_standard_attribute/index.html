@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="a.jpg" alt="" id="imgEl" something="myNewData" height="100px" width="200px" >
+
+    <script>
+        console.log(imgEl.src);
+        console.log(imgEl.something);
+        console.log(imgEl.getAttribute('something'));
+
+        imgEl.myData = {
+            name : 'mohan',
+            mob : '2112',
+
+        }
+        console.log(imgEl.myData.name);
+        console.log(imgEl.hasAttribute('something'));
+
+        Node.prototype.udaDo = function () {
+            this.remove();   
+        }
+
+        if (imgEl.hasAttribute('something')) {
+            imgEl.udaDo();
+        }
+        else{
+            console.log('sorry');
+        }
+        
+        imgEl.setAttribute('Ashish', 'inocrypt')
+        console.log(imgEl);
+        console.log(imgEl.getAttribute('Ashish'))
+        imgEl.removeAttribute('Ashish')
+        console.log(imgEl);
+        
+        console.log(imgEl.attributes.src);
+        </script>
+</body>
+</html>

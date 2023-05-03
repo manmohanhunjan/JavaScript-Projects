@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input
+      data-shw="213312"
+      type="text"
+      name=""
+      id="elem"
+      data-myappid-v1="asdasd"
+    />
+    <a id="annch" href="#">link</a>
+    <script>
+      console.log(elem.dataset.shw);
+      elem.dataset.shw = "dasda";
+      console.log(elem.dataset.shw);
+      //   elem.setAttribute('data-MyAppId-v1', '')
+
+      // console.log(elem.getAttribute('data-MyAppId-v1'));
+      console.log(elem.dataset.myappidV1);
+
+      console.log(annch.href);
+    </script>
+  </body>
+</html>

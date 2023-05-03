@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="a.jpg" alt="" id="imgEl" something="myNewData" height="100px" width="200px" manmohan="demoAttr">
+
+    <script>
+        // console.log(imgEl.attributes); 
+        // console.log(imgEl.attributes.length)
+        // console.log(imgEl.attributes[4])
+        let count = 0;
+        let i = 0;
+        while (i<imgEl.attributes.length) {
+            if (imgEl.attributes[i].name =='height') {
+                
+            }
+            else{
+                console.log(++count +' no pe '+imgEl.attributes[i].name+' hai aur osli value '+imgEl.attributes[i].value)
+
+            }
+            i++;
+        }
+    //     let count = 0;
+    
+    // for (let att of imgEl.attributes){
+    //     if (att.name == 'height' ) {
+    //         imgEl.removeAttribute('height');
+    //     }else{
+    //         console.log(++ count + ' element name'+ att.name +' element value ' + att.value);
+
+    //     }
+    //     }
+        </script>
+</body>
+</html>
