@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div class="login-box">
+        <h2>Product Form</h2>
+        <section>
+          <div class="user-box">
+            <input type="text"  name="" required="" id="productName">
+            <label>Product Name</label>
+          </div>
+          <div class="user-box">
+            <input type="number" name="" required="" id="productPrice">
+            <label>Product Price</label>
+          </div>
+          <div class="user-box">
+            <textarea  name="" required="" id="productDescription" rows="5" cols="40"></textarea>
+            <label>Product Description</label>
+          </div>
+          <div class="user-box">
+            <select type="number" name="" id="tax">
+                <option value="5">5%</option>
+                <option value="12">12%</option>
+                <option value="18">18%</option>
+                <option value="28">28%</option>
+            </select>
+            <label>Tax</label>
+          </div>
+          <div class="user-box">
+            <!-- <input type="text" name="" required="" id="discount_type"> -->
+            <select name="" id="discount_type">
+                <option value="Select Discount Type">Select Discount Type</option>
+                <option value="FLAT" >Flat</option>
+                <option value="PERCENT" >Percent</option>
+            </select>
+            <label>Discount Type</label>
+          </div>
+          <div class="user-box">
+            <input type="number" name="" required="" id="discount_value">
+            <label>Discount Value</label>
+          </div>
+          
+        </section>
+      </div>
+      <div class="styled-table">
+        <h1>Live Product Update</h1>
+        <div id="daRealContainer"></div>
+        <!-- <h2>Product Name:</h2>
+        <h2>Product Price:</h2>
+        <h2>Product Description:</h2>
+        <h2>Product Tax:</h2>
+        <h2>Product Discount Type:</h2>
+        <h2>Discount Value:</h2>
+        <h2>Total:</h2> -->
+        
+      </div>
+    
+</body>
+</html>
