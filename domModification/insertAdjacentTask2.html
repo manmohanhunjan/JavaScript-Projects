@@ -106,8 +106,8 @@
         <h1>Buttons</h1>
         <button id="part1" btn-type="p1">Part-1</button>
         <button id="part2" btn-type="p2">Part-2</button><br /><br />
-        <button btn-type="p3">Part-3</button>
-        <button btn-type="p4">Part-4</button>
+        <button id="part3" btn-type="p3">Part-3</button>
+        <button id="part4" btn-type="p4">Part-4</button>
       </div>
 
       <div id="updown">
@@ -124,8 +124,8 @@
     const part1 = document.querySelector("#part1");
     part1.addEventListener("click", lockedElement);
     part2.addEventListener("click", lockedElement);
-    // part3.addEventListener("click", lockedElement);
-    // part4.addEventListener("click", lockedElement);
+    part3.addEventListener("click", lockedElement);
+    part4.addEventListener("click", lockedElement);
 
     const btnDown = document.querySelector("#btn-down");
     btnDown.addEventListener("click", downEl);
