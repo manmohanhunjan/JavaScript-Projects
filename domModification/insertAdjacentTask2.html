@@ -1,105 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="insertAdjacentTask2.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=dic, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <title>Document</title>
+  <link rel="stylesheet" href="insertAdjacentTask2.css" />
+  <style>
+    .highlite {
+      background-color: yellow;
+    }
+  </style>
 </head>
-<div class="container">
-    <div class="row">
-      <div class="col">
-        <img src="wallpaperflare.com_wallpaper (5).jpg" height="100px" width="200px" alt="">
+
+<body>
+  <div class="div1"></div>
+  <div id="maindiv">
+    <div id="app">
+      <div id="div">
+        <div class="d1" style="background-color: aqua; width: 32%; height: 200px">
+          <h1>Block1</h1>
+        </div>
+        <div class="d1" style="
+              background-color: rgb(151, 151, 242);
+              width: 32%;
+              height: 200px;
+            ">
+          <h1>Block2</h1>
+        </div>
+        <div class="d1" style="
+              background-color: rgb(204, 156, 248);
+              width: 32%;
+              height: 200px;
+            ">
+          <h1>Block3</h1>
+        </div>
       </div>
-      <div class="col">
-        <img src="wallpaperflare.com_wallpaper (5).jpg" height="100px" width="200px" alt="">
+
+      <div id="img">
+        <img src="wallpaperflare.com_wallpaper (5).jpg" width="100%" height="400px" />
       </div>
-      <div class="col">
-        <img src="wallpaperflare.com_wallpaper (5).jpg" height="100px" width="200px" alt="">
+
+      <div id="table_form">
+        <div id="form">
+          <form action="/action_page.php">
+            <label for="fname">First name:</label><br />
+            <input type="text" id="fname" name="fname" /><br />
+            <label for="lname">Last name:</label><br />
+            <input type="text" id="lname" name="lname" /><br /><br />
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
+        <div id="table">
+          <table style="width: 100%">
+            <tr>
+              <th>Company</th>
+              <th>Contact</th>
+              <th>Country</th>
+            </tr>
+            <tr>
+              <td>Alfreds Futterkiste</td>
+              <td>Maria Anders</td>
+              <td>Germany</td>
+            </tr>
+            <tr>
+              <td>Centro comercial Moctezuma</td>
+              <td>Francisco Chang</td>
+              <td>Mexico</td>
+            </tr>
+            <tr>
+              <td>Ernst Handel</td>
+              <td>Roland Mendel</td>
+              <td>Austria</td>
+            </tr>
+            <tr>
+              <td>Island Trading</td>
+              <td>Helen Bennett</td>
+              <td>UK</td>
+            </tr>
+            <tr>
+              <td>Laughing Bacchus Winecellars</td>
+              <td>Yoshi Tannamuri</td>
+              <td>Canada</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div id="aboutframe">
+        <div id="ifrme">
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/QDBHJsi8TPk" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
+        <div id="aboutus">
+          <h1>About-Us</h1>
+        </div>
       </div>
     </div>
-    <img class="wideImg" src="wallpaperflare.com_wallpaper (5).jpg"  alt="..." height="80px" width="100%">
-
-    <!-- table -->
-    <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <!-- form -->
-      <form>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-        </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1">
-        </div>
-        <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1">Check me out</label>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
-
-      <!-- iframe+aboutus -->
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <!-- iframe -->
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/oXzDg_RnBQs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
-          <!-- about us -->
-          <div class="col">
-            <h1>About us</h1>
-          </div>
-          
-        </div>
+    <div id="field">
+      <div>
+        <h1>Buttons</h1>
+        <button id="part1" btn-type="p1">Part-1</button>
+        <button id="part2" btn-type="p2">Part-2</button><br /><br />
+        <button id="part3" btn-type="p3">Part-3</button>
+        <button id="part4" btn-type="p4">Part-4</button>
       </div>
+
+      <div id="updown">
+        <button id="btn-up" style="font-size: 24px">
+          UP<i class="fas fa-angle-double-down"></i>
+        </button>
+        <br />
+        <button id="btn-down" style="font-size: 24px">DOWN</button>
+      </div>
+    </div>
   </div>
+  <script>
+    let lookedEl = "";
+    const part1 = document.querySelector("#part1");
+    part1.addEventListener("click", lockedElement);
+    part2.addEventListener("click", lockedElement);
+    part3.addEventListener("click", lockedElement);
+    part4.addEventListener("click", lockedElement);
 
-  <div class="dosraContainer">
-    <button type="button" class="btn btn-primary">Primary</button>
-<button type="button" class="btn btn-secondary">Secondary</button>
-<button type="button" class="btn btn-success">Success</button>
-<button type="button" class="btn btn-danger">Danger</button>
-<button type="button" class="btn btn-warning">Warning</button>
-<button type="button" class="btn btn-info">Info</button>
+    const btnDown = document.querySelector("#btn-down");
+    btnDown.addEventListener("click", downEl);
 
-<button type="button" class="btn btn-dark">Dark</button>
+    function downEl() {
+      console.log("sdfsdgs");
+      lookedEl.before(lookedEl.nextElementSibling);
+    }
+    const btnUp = document.querySelector("#btn-up");
+    btnUp.addEventListener("click", upEl);
 
-  </div>
-<body>
-    
+    function upEl() {
+      console.log("up");
+      console.log(lookedEl.previousElementSibling);
+
+      lookedEl.after(lookedEl.previousElementSibling);
+    }
+
+    function lockedElement() {
+      console.log(event.target.id);
+      if (!lookedEl == "") {
+        lookedEl.className = "";
+      }
+      switch (event.target.id) {
+        case "part1":
+          lookedEl = document.querySelector("#div");
+          break;
+        case "part2":
+          lookedEl = document.querySelector("#img");
+          break;
+      }
+      lookedEl.classList.add("highlite");
+    }
+  </script>
 </body>
+
 </html>

@@ -1,51 +1,21 @@
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 
 }
-.container{
-    width: 70%;
-    margin: 0 auto;
-    padding: 10px;
-    
-    float: left;
+#app {
+    width: 80%;
+    border: 2px solid black;
+}    
+
+#div {
+    width: 100%;
+    display: flex;
+    padding-left: 45px;
+    padding-top: 15px;
+    text-align: center;
 }
-.container::after{
-    clear: both;
-}
-.wideImg{
-    object-fit: cover;
-    padding: 4px;
 
 }
-.table{
-    width: 40%;
-    float: left;
-    /* padding: 10px; */
+#img{
+    padding: 20px;
 }
-.table::after{
-    clear: both;
 
-}
-form{
-    width: 40%;
-    float: right;
-    padding: 10px;
-}
-.form::after{
-    clear: both;
-
-}
-button{
-    padding: 10px;
-    margin: 10px;
-    border-radius: 5px;
-    border: none;
-    background-color: #4CAF50;
-    color: white;
-    cursor: pointer;
-    
 }
