@@ -8,9 +8,11 @@
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <title>Document</title>
   <link rel="stylesheet" href="insertAdjacentTask2.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.min.css">
   <style>
     .highlite {
-      background-color: yellow;
+      background-color: rgb(200, 255, 0);
+      color: rgb(0, 255, 51);
     }
   </style>
 </head>
@@ -19,21 +21,20 @@
   <div class="div1"></div>
   <div id="maindiv">
     <div id="app">
-
       <!-- Part 1 Start -->
 
       <div id="div">
-        <div class="d1" style="background-color: aqua; width: 32%; height: 200px">
+        <div id="b1" class="d1" style="background-color: aqua; width: 32%; height: 200px">
           <h1>Block1</h1>
         </div>
-        <div class="d1" style="
+        <div id="b2" class="d1" style="
               background-color: rgb(151, 151, 242);
               width: 32%;
               height: 200px;
             ">
           <h1>Block2</h1>
         </div>
-        <div class="d1" style="
+        <div id="b3" class="d1" style="
               background-color: rgb(204, 156, 248);
               width: 32%;
               height: 200px;
@@ -62,8 +63,6 @@
             <input type="submit" value="Submit" />
           </form>
         </div>
-
-        
 
         <div id="table">
           <table style="width: 100%">
@@ -118,7 +117,6 @@
       </div>
 
       <!-- Part 4 End -->
-
     </div>
     <div id="field">
       <div>
@@ -146,6 +144,19 @@
     part3.addEventListener("click", lockedElement);
     part4.addEventListener("click", lockedElement);
 
+    // Individual Parts
+    b1.addEventListener("click", lockedElement);
+    b2.addEventListener("click", lockedElement);
+    b3.addEventListener("click", lockedElement);
+
+    form.addEventListener("click", lockedElement);
+    table.addEventListener("click", lockedElement);
+
+    ifrme.addEventListener("click", lockedElement);
+    aboutus.addEventListener("click", lockedElement);
+
+    // Buttons
+
     const btnDown = document.querySelector("#btn-down");
     btnDown.addEventListener("click", downEl);
 
@@ -164,6 +175,8 @@
     }
 
     function lockedElement() {
+
+    
       console.log(event.target.id);
       if (!lookedEl == "") {
         lookedEl.className = "";
@@ -181,10 +194,63 @@
         case "part4":
           lookedEl = document.querySelector("#aboutframe");
           break;
-      }
-      lookedEl.classList.add("highlite");
+        // Pehle ke teen dabbe vale Casese
+        case "b1":
+          lookedEl = document.querySelector("#b1");
+          break;
+
+        case "b2":
+          lookedEl = document.querySelector("#b2");
+          break;
+
+        case "b3":
+          lookedEl = document.querySelector("#b3");
+          break;
+        //End
+
+        //form aur table vale cases
+        case "form":
+          lookedEl = document.querySelector("#form");
+          break;
+
+        case "table":
+          lookedEl = document.querySelector("#table");
+          break;
+
+        //End
+        case "ifrme":
+          lookedEl = document.querySelector("#ifrme");
+          break;
+
+        case "aboutus":
+          lookedEl = document.querySelector("#aboutus");
+          break;
+
+            
+
+        }
+        
+        lookedEl.classList.add("highlite");
+        //sweet alert with confirm feature
+        Swal.fire({
+          title: "Are you sure?",
+          text: "You want to lock this element",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "Yes",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            Swal.fire("Locked!", "Your element has been locked.", "success");
+          }
+        });
+        
+
     }
   </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.min.js"></script>
+
 </body>
 
 </html>
