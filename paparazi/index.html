@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+        .on{
+            display: '';
+            background-color: yellow;
+        }
+        .off{
+            display: none;
+            background-color: yellow;
+        }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum <span class="off">WHO</span> dolor sit amet
+      consectetur,<span class="off">WHO</span> adipisicing elit. Ex
+      placeat, eum repudiandae repellat,<span class="off">WHO</span>
+      unde voluptates temporibus ut qui perspiciatis, harum eaque. Sed dolorem
+      sint,<span class="off">WHO</span> omnis dignissimos quis
+      corporis unde voluptas aperiam officia amet laudantium.
+
+      <button>
+        add span
+      </button>
+    </p>
+  </body>
+  <script>
+    let button = document.querySelector("button");
+    button.addEventListener("click", function() {
+      let span = document.querySelectorAll("span");
+      let i = 0;
+      while (i<span.length) {
+        span[i].className = "on";
+        // span[i].style.background = "yellow";
+
+        i++;
+      }
+      
+    });
+    
+  </script>
+</html>

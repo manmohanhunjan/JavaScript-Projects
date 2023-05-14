@@ -1,4 +1,5 @@
-const submitBtn = document.querySelector("a");
+const insert = document.querySelector("#insert");
+const commit = document.querySelector("#commit")
 const productName = document.querySelector("#productName");
 const productCP = document.querySelector("#productCP");
 const productSP = document.querySelector("#productSP");
@@ -8,12 +9,19 @@ const discount_value = document.querySelector("#discount_value");
 
 var counter = 0;
 
+let documentFragg = document.createDocumentFragment()
+
 const tbody = document.querySelector("tbody");
 
-submitBtn.addEventListener("click", function () {
-  counter += 1;
+commit.addEventListener('click', function () {
+    tbody.appendChild(documentFragg)
+})
 
-submitBtn.addEventListener('click' ,function () {
+// insert.addEventListener("click", function () {
+  
+insert.addEventListener('click' ,function () {
+    counter += 1;
+
     const tr = document.createElement('tr')
     const td1 = document.createElement('td')
     const td2 = document.createElement('td')
@@ -24,7 +32,7 @@ submitBtn.addEventListener('click' ,function () {
     const td7 = document.createElement('td')
     const td8 = document.createElement('td')
 
-    counter += 1
+    
 
 
     td1.textContent = counter
@@ -60,7 +68,7 @@ submitBtn.addEventListener('click' ,function () {
     tr.appendChild(td7)
     tr.appendChild(td8)
 
-    tbody.appendChild(tr)
+    documentFragg.appendChild(tr)
 
     //remover
     tr.addEventListener('click', function () {

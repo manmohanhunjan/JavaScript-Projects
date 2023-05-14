@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main{
+            display: flex;
+            
+        }
+        #main > div{
+            width: 50%;
+        }
+        table, th,td{
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 30px;
+        }
+        /* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+        
+    </style>
+</head>
+<body>
+    <div id="main">
+
+    
+    <div>
+        <h2>HTML Forms</h2>
+
+        <form action="" >
+          <label for="Pname">Product name:</label><br>
+          <input type="text" id="Pname" name="Pname" ><br>
+          <label for="lname">Product Price:</label><br>
+          <input type="text" id="PPrice" name="PPrice" ><br>
+          <label for="lname">Product Qty:</label><br>
+          <input type="text" id="Pqty" name="PPrice" ><br>
+
+        <button id="btn">Add</button>
+
+       
+        </form> 
+
+
+    </div>
+    <div>
+        <table id="myTable">
+           <tr>
+            <th>sno</th>
+            <th>name</th>
+            <th>price</th>
+            <th>Qty</th>
+            <th>action</th>
+           </tr>
+
+
+        </table>
+    </div>
+</div>
+
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+    
+        <label for="Pname">Product name:</label><br>
+        <input type="text" id="PnameEdit" name="Pname" ><br>
+        <label for="lname">Product Price:</label><br>
+        <input type="text" id="PPriceEdit" name="PPrice" ><br>
+        <label for="lname">Product Qty:</label><br>
+        <input type="text" id="PqtyEdit" name="PPrice" ><br>
+
+      <button id="save-btn-ashish">save</button>
+
+     
+      
+    </div>
+  
+  </div>
+
+  <script>
+    // Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+// var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+// btn.onclick = function() {
+//   modal.style.display = "block";
+// }
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+  </script>
+<script>
+   const btn= document.querySelector('#btn');
+   btn.addEventListener('click',addTableData);
+   function addTableData(event){
+    event.preventDefault();
+       const pName=document.querySelector('#Pname').value;
+       const pPrice=document.querySelector('#PPrice').value;
+       const pQty=document.querySelector('#Pqty').value;
+
+    addTableRow(pName,pPrice,pQty)
+   }
+
+   let count=0;
+    function addTableRow(p,r,q){
+      debugger;
+        let table= document.querySelector('#myTable');
+        let createElTr=document.createElement('tr');
+
+            let sno=document.createElement('td');
+            let createElPname=document.createElement('td');
+            let createElPprice=document.createElement('td');
+            let createElPQty=document.createElement('td');
+            let createElAction=document.createElement('td');
+
+
+            sno.textContent= ++count;
+            createElPname.textContent=p;
+            createElPprice.textContent=r;
+            createElPQty.textContent=q;
+            createElAction.innerHTML="<button>Edit</button>";
+
+           let addEventBtn= createElAction.querySelector('button');
+           addEventBtn.setAttribute('data-id',count);
+           addEventBtn.setAttribute('data-pname',p);
+           addEventBtn.setAttribute('data-pprice',r);
+           addEventBtn.setAttribute('data-pqty',q);
+           addEventBtn.addEventListener('click',editdata);
+            
+           
+            createElTr.append(sno);
+            createElTr.append(createElPname);
+            createElTr.append(createElPprice);
+            createElTr.append(createElPQty);
+            createElTr.append(createElAction);
+
+
+
+          table.append(createElTr);
+
+            
+
+  
+
+   }
+
+
+   function editdata(){
+         const alldata= event.target;
+        const modal= document.querySelector('#myModal')
+        modal.style.display = "block";
+         document.querySelector('#PnameEdit').value=alldata.dataset.pname;
+         document.querySelector('#PPriceEdit').value=alldata.dataset.pprice;
+         document.querySelector('#PqtyEdit').value=alldata.dataset.pqty;
+         console.log(alldata.dataset)
+         const saveBtn= modal.querySelector('#save-btn-ashish');
+        
+        saveBtn.addEventListener('click',function(event){
+              console.log("called")
+            const PnameEdit= modal.querySelector('#PnameEdit').value;
+            const PPriceEdit= modal.querySelector('#PPriceEdit').value;
+            const PqtyEdit= modal.querySelector('#PqtyEdit').value;
+            console.log(PnameEdit,PPriceEdit,PqtyEdit)
+
+           let parentEl= alldata.parentElement.parentElement;
+           parentEl.children[1].textContent=PnameEdit;
+           parentEl.children[2].textContent=PPriceEdit;
+            parentEl.children[3].textContent=PqtyEdit;
+            parentEl.children[4].children[0].dataset.pname=PnameEdit;
+            parentEl.children[4].children[0].dataset.pprice=PPriceEdit;
+            parentEl.children[4].children[0].dataset.pqty=PqtyEdit;
+           
+            modal.style.display = 'none'
+            
+
+        },{once : true});
+       
+        
+
+
+        
+   }
+  
+</script>
+</body>
+</html>

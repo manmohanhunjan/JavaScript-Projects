@@ -133,12 +133,14 @@
         </button>
         <br />
         <button id="btn-down" style="font-size: 24px">DOWN</button>
+        <button id="btnClone" style="font-size: 24px">Cloner</button>
+
       </div>
     </div>
   </div>
   <script>
     let lookedEl = "";
-    const part1 = document.querySelector("#part1");
+    // const part1 = document.querySelector("#part1");
     part1.addEventListener("click", lockedElement);
     part2.addEventListener("click", lockedElement);
     part3.addEventListener("click", lockedElement);
@@ -174,6 +176,26 @@
       lookedEl.after(lookedEl.previousElementSibling);
     }
 
+    btnClone.addEventListener('click', clonerFucn)
+
+    function clonerFucn() {
+      console.log('cloner');
+      lookedEl.cloneNode(true)
+      lookedEl.after()
+    }
+    
+//event lisner for shift+click on any element
+    document.addEventListener("click", (event) => {
+      if (event.shiftKey) {
+        console.log(event.target);
+        //clone the node
+        const cloneNode = event.target.cloneNode(true);
+        //append the clone node
+        event.target.after(cloneNode);
+        //add border to the clone node
+        event.target.style.border = "2px solid red";
+      }
+    });
     function lockedElement() {
 
     
