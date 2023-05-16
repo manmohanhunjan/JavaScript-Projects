@@ -1,0 +1,32 @@
+body{
+    box-sizing: border-box;
+    font-family: sans-serif;
+    margin: auto;
+}
+
+#container{
+    border: 1px solid black;
+    border-radius: 25px;
+    display: inline-block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 5px 5px 5px 5px blue;
+}
+
+#btnShowAns{
+    position: relative;
+    left: 85%;
+    top: 40%;
+    margin-bottom: 30px;
+}
+#innerContainer{
+    padding: 3rem;
+}
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
