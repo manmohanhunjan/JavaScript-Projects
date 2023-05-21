@@ -1,0 +1,11 @@
+.part1Items ul li, .part2Items ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px;
+}
+nav{
+    background-color: beige;
+    display: flex;
+}
+
+

@@ -1,0 +1,20 @@
+.container{
+    height: 20rem;
+    width: 30rem;
+    background-color: greenyellow;
+    border: 3px solid black;
+}
+
+h1,p{
+    color: white;
+}
+
+.ball{
+    height: 4rem;
+    width: 4rem;
+    background-color: black;
+    border-radius: 3rem;
+    position: relative;
+    top: -9rem;
+    left: 4rem;
+}
