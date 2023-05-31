@@ -1,5 +1,6 @@
 const submitBtn = document.querySelector("#submitBtn"); // submit button
-const tbody = document.querySelector("tbody"); // tbody
+const tbody = document.querySelector("#mainTbody"); // tbody
+const modalTbody = document.querySelector('#modalTbody')
 
 let count = 0; // count for serial number
 const products = []; // array for storing product details
@@ -44,7 +45,17 @@ submitBtn.addEventListener("click", () => {     // submit button event listener
   for (let k = 0; k < 6; k++) { // appending td elements to tr element
     tr.appendChild(td[k]);
   }
-  td[6].innerHTML = `<button class="btn btn-success editBtn">Add To Cart</button>`; // adding delete button to td element 
+  const addToBtn = document.createElement("button");
+  //assingning id to button
+  addToBtn.setAttribute("id", count);
+  //assigning id value to button
+  // addToBtn.setAttribute("id", count);
+  //adding text to button
+  addToBtn.textContent = "Add To Cart";
+  //adding classList to button
+  addToBtn.classList.add("btn", "btn-success", "add-to-cart");
+
+  td[6].appendChild(addToBtn) // adding delete button to td element 
   tr.appendChild(td[6]); // appending td element to tr element
 
   tbody.appendChild(tr); // appending tr element to tbody
@@ -59,3 +70,28 @@ submitBtn.addEventListener("click", () => {     // submit button event listener
 
 
 });
+
+document.addEventListener("click", (e) => { // event listener for addtocart button
+  if (e.target.classList.contains("add-to-cart")) { // checking if addtocart button is clicked
+    const id = e.target.getAttribute("id"); // getting id of addtocart button
+    console.log(id)
+    // const tr = e.target.parentElement.parentElement; // getting tr element
+    const td = []; // array for storing td elements
+  const tr = document.createElement("tr"); // tr element
+
+  for (let j = 0; j < 6; j++) { // creating td elements
+    td[j] = document.createElement("td"); 
+  }
+  td[0].textContent = products[id-1].count; // adding product details to td elements
+  td[1].textContent = products[id-1].name;
+  td[2].textContent = products[id-1].sPrice;
+  td[3].textContent = products[id-1].cPrice;
+  td[4].textContent = products[id-1].tax;
+  td[5].textContent = products[id-1].discount;
+    
+  for (let k = 0; k < 6; k++) { // appending td elements to tr element
+    tr.appendChild(td[k]);
+  }
+
+  modalTbody.appendChild(tr);
+  }})

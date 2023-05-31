@@ -17,6 +17,49 @@
 
 <body>
   <header>
+     <!-- Modal -->
+     <div class="modal" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title"></h4>
+            <button  class="btn-close videoStop" data-bs-dismiss="modal"></button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body">
+            <div class="table-responsive">
+              <table class="table table-primary">
+                <thead>
+                  <tr>
+                    <th scope="col">S.no</th>
+                    <th scope="col">Product Name</th>
+                    <th scope="col">Selling Price</th>
+                    <th scope="col">Cost Price</th>
+                    <th scope="col">Tax</th>
+                    <th scope="col">Discount</th>
+
+                  </tr>
+                </thead>
+                <tbody id="modalTbody">
+                  
+                  
+                </tbody>
+              </table>
+            </div>
+            
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button class="btn btn-danger videoStop" data-bs-dismiss="modal">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Nav tabs -->
     <nav class="navbar navbar-expand-md navbar-light bg-light">
         <div class="container">
@@ -44,22 +87,25 @@
           <form class="d-flex my-2 my-lg-0">
             <input class="form-control me-sm-2" type="text" placeholder="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            <button class="btn btn-primary my-2 ms-4 my-sm-0 position-relative"><i class="bi bi-cart"></i><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">+99</span></button>
+            <button
+            id="modalBtn"
+            type="button"
+            class="btn btn-light btn-lg"
+            
+            data-bs-toggle="modal"
+            data-bs-target="#myModal"
+          >
+            <i
+              class="bi bi-cart"
+              style="color: #f70202"
+            ></i>
+          </button>
+            <!-- <button class="btn btn-primary my-2 ms-4 my-sm-0 position-relative" data-bs-toggle="modal" data-bs-target="#myModal"><i class="bi bi-cart"></i><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">+99</span></button> -->
           </form>
         </div>
       </div>
     </nav>
     
-    
-    <!-- Tab panes -->
-    
-    
-    
-    <!-- (Optional) - Place this js code after initializing bootstrap.min.js or bootstrap.bundle.min.js -->
-    <!-- <script>
-        var triggerEl = document.querySelector('#navId a')
-        bootstrap.Tab.getInstance(triggerEl).show() // Select tab by name
-    </script> -->
     
   </header>
   <main>
@@ -110,7 +156,7 @@
                   <th>Action</th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody id="mainTbody">
                 
                 
               </tbody>
