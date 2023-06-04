@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Bubbling Example</title>
+</head>
+<body>
+  <div id="parent">
+    <div id="child">
+      <button id="grandchild">Click me!</button>
+    </div>
+  </div>
+
+  <script>
+    // Event handler for the parent element
+    function parentClickHandler(event) {
+      console.log("Parent clicked");
+    }
+
+    // Event handler for the child element
+    function childClickHandler(event) {
+      console.log("Child clicked");
+    }
+
+    // Event handler for the grandchild button
+    function grandchildClickHandler(event) {
+      console.log("Grandchild clicked");
+      event.stopPropagation(); // Stop the event from bubbling up
+    }
+
+    // Attach event handlers
+    document.getElementById("parent").addEventListener("click", parentClickHandler);
+    document.getElementById("child").addEventListener("click", childClickHandler);
+    document.getElementById("grandchild").addEventListener("click", grandchildClickHandler);
+  </script>
+</body>
+</html>
