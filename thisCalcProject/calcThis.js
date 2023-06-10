@@ -1,8 +1,8 @@
-const calculator = {
+const calculator = {  // object literal
     value: 0,
-    add: function (num) {
-        this.value += num;
-        return this;
+    add: function (num) {  // method
+        this.value += num; // this refers to the object itself
+        return this;    // return the object itself
     },
     subtract: function (num) {
         this.value -= num;
@@ -18,7 +18,7 @@ const calculator = {
     },
     clear: function () {
         this.value = 0;
-        return this;
+        return this;    // return the object itself to allow chaining of methods how?  
     },
     getValue: function () {
         return this.value;
